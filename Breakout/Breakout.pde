@@ -60,6 +60,9 @@ void setup() {
   pd = 100;
   vx = 0;
   vy = 1;
+  
+  //intialize keyboard variables
+  akey = dkey = false; 
 }
 
 void draw() {

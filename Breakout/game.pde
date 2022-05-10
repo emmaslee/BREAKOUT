@@ -5,8 +5,8 @@ void game() {
   
   fill(white);             //draw paddle
   circle(px, py, pd);
-  if (akey) px = px - 5;   //key movement
-  if (dkey) px = px + 5;
+  if (akey == true) px = px - 5;   //key movement
+  if (dkey == true) px = px + 5;
   
   //ball--------------------------------------------------
   
@@ -36,11 +36,11 @@ void game() {
   int i = 0;
   while (i < 3) {
     circle(x[i], y[i], brickd);
-    i=i+1;
-  }
-   if (dist(bx, by, x[1], y[1]) < bd/2 + brickd/2) { //brick bounce
+    if (dist(bx, by, x[i], y[i]) < bd/2 + brickd/2) { //brick bounce
   vx = (bx - x[1])/10;
   vy = (by - y[1])/10;
+    }
+    i=i+1;
   }
 }
 
