@@ -5,8 +5,8 @@ void game() {
   
   fill(white);             //draw paddle
   circle(px, py, pd);
-  if (akey == true) px = px - 5;   //key movement
-  if (dkey == true) px = px + 5;
+  if (akey) px = px - 5;   //key movement
+  if (dkey) px = px + 5;
   
   //ball--------------------------------------------------
   
@@ -28,22 +28,34 @@ void game() {
   vx = vx * -1;
   }
   
-  //brick----------------------------------
+  //bricks----------------------------------
  // circle(x[0], y[0], brickd);
   //circle(x[1], y[1], brickd);
   //circle(x[2], y[2], brickd);
   
+
   int i = 0;
-  while (i < 3) {
-    circle(x[i], y[i], brickd);
-    if (dist(bx, by, x[i], y[i]) < bd/2 + brickd/2) { //brick bounce
-  vx = (bx - x[1])/10;
-  vy = (by - y[1])/10;
+  while (i < n) {
+    if (alive[i] == true) {
+    manageBrick(i);
     }
-    i=i+1;
+    i++;
   }
 }
 
 void gameClicks() {
-}
   
+}
+ 
+  void manageBrick (int i) {
+    if (y[i] == 100) fill(purple);
+    if (y[i] == 200) fill(mango);
+    if (y[i] == 300) fill(orange);
+    if (y[i] == 400) fill(green);
+    circle(x[i], y[i], brickd);
+    if (dist(bx, by, x[i], y[i]) < bd/2 + brickd/2) { //brick bounce
+      vx = (bx - x[i])/10;
+      vy = (by - y[i])/10;
+      alive[i] = false;
+    }
+  }
