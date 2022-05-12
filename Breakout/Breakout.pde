@@ -31,9 +31,8 @@ float a;
 float bx, by, bd, vx, vy, px, py, pd;
 
 //Keyboard variables
-boolean akey, dkey;
+boolean akey, dkey, leftkey, rightkey;
 
-//intialize keyboard variables
 
 
 
@@ -72,6 +71,8 @@ void setup() {
   vx = 0;
   vy = 1;
   
+ //initialize keyboard variables
+ akey = dkey = leftkey = rightkey = false;
 
 }
 

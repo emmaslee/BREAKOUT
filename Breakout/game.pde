@@ -5,8 +5,8 @@ void game() {
   
   fill(white);             //draw paddle
   circle(px, py, pd);
-  if (akey) px = px - 5;   //key movement
-  if (dkey) px = px + 5;
+  if (akey || leftkey) px = px - 5;   //key movement
+  if (dkey || rightkey) px = px + 5;
   
   //ball--------------------------------------------------
   
