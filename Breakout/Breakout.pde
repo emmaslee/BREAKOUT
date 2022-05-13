@@ -33,6 +33,9 @@ float bx, by, bd, vx, vy, px, py, pd;
 //Keyboard variables
 boolean akey, dkey, leftkey, rightkey;
 
+//scoring
+int score, lives, timer;
+
 
 
 
@@ -46,6 +49,8 @@ void setup() {
   alive = new boolean[n];
   tempx = 100;
   tempy = 100;
+  lives = 3;
+  score = 0;
   int i = 0;
   while (i < n) {
     x[i] = tempx;
