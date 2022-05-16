@@ -1,9 +1,20 @@
 void gameover() {
   background(255);
   
-  fill(0);
-   textSize(60);
-   text("GAMEOVER, YOU WIN", 120, 150);
+   
+   if (score > 27) {
+      rect(160, 230, 490, 120);
+    textSize(80);
+    fill(255, 170, 255);
+    text("YOU WIN", 200, 320);
+ } else {     
+
+    
+    rect(160, 230, 490, 120);
+    textSize(80);
+    fill(154, 234, 111);
+    text("YOU LOSE", 180, 320);
+ }
     
   //Return to Game button
   //tactile - Return to Game button

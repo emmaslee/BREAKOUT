@@ -11,6 +11,13 @@ void intro() {
   image(gold, 100, 400, 100, 100);
   image(gold, 700, 300, 70, 70);
   image(gold, 500, 100, 90, 90);
+  image(gold, 200, 100, 50, 50);
+  image(gold, -30, 250, 70, 70);
+  image(gold, 500, 350, 40, 40);
+  image(gold, 700, 700, 100, 100);
+  image(gold, 600, 550, 60, 60);
+  image(gold, 350, 650, 80, 80);
+  image(gold, 100, 700, 50, 50);
 
 //Start Button
 //tactile - start button
