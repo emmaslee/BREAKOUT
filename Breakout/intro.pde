@@ -1,5 +1,5 @@
 void intro() {
-  background(255);
+  background(88, 0, 242);
   fill(0);
 
   
@@ -8,6 +8,9 @@ void intro() {
   fill(0);
   textSize(72);
   text("BREAKOUT", 180, 300);
+  image(gold, 100, 400, 100, 100);
+  image(gold, 700, 300, 70, 70);
+  image(gold, 500, 100, 90, 90);
 
 //Start Button
 //tactile - start button

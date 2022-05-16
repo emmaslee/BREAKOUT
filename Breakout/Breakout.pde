@@ -7,8 +7,11 @@ int n;
 int tempx, tempy;
 int i;
 
-//colours
+//Image
+PImage gold;
 
+
+//colours
 color darkblue = #272D4D;
 color purple   = #B83564;
 color mango    = #FF6A5A;
@@ -64,7 +67,8 @@ void setup() {
     i=i+1;
   }
   
-
+//images
+gold = loadImage("gold.png");
   
   //set up paddle and ball
   bx = width/2;
