@@ -1,4 +1,6 @@
 void gameover() {
+    theme.pause();
+  gameover.play();
   background(88, 0, 242);
   image(gold, 100, 400, 100, 100);
   image(gold, 700, 300, 70, 70);

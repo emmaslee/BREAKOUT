@@ -1,3 +1,9 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 //Arrays
 int [] x;
 int [] y;
@@ -10,6 +16,9 @@ int i;
 //Image
 PImage gold;
 
+//sound
+Minim minim; 
+AudioPlayer theme, coin, bump, gameover;
 
 //colours
 color darkblue = #272D4D;
@@ -83,6 +92,12 @@ gold = loadImage("gold.png");
  //initialize keyboard variables
  akey = dkey = leftkey = rightkey = false;
 
+//minim
+  minim = new Minim(this);
+  theme = minim.loadFile("mario bros theme.mp3");
+  coin = minim.loadFile("coin.wav");
+  bump = minim.loadFile("bump.wav");
+  gameover = minim.loadFile("gameover.wav");
 }
 
 void draw() {

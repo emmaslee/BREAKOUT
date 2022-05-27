@@ -1,4 +1,5 @@
 void game() {
+  theme.play();
   background(darkblue);
   
   //pause button

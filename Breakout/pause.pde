@@ -1,4 +1,5 @@
 void pause() {
+  theme.pause();
   stroke(0);
   fill(200);
   rect(50, 700, 150, 80);
